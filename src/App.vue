@@ -10,7 +10,7 @@
             <a @click="scrollToSection(4)"
                 class="hover:cursor-pointer text-gray-200 bg-gray-800 py-2 px-4 rounded-md transition duration-300 hover:bg-gray-900">4</a>
         </nav>
-        <Section1 ref="Section1" />
+        <Home ref="Home" />
         <Section2 ref="Section2" />
         <Section3 ref="Section3" />
         <Section4 ref="Section4" />
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import Section1 from './components/Section1.vue';
+import Home from './components/Home.vue';
 import Section2 from './components/Section2.vue';
 import Section3 from './components/Section3.vue';
 import Section4 from './components/Section4.vue';
@@ -31,10 +31,10 @@ export default {
         },
     },
     components: {
-        Section1,
+        Home,
         Section2,
         Section3,
-        Section4
+        Section4,
     }
 }
 </script>
