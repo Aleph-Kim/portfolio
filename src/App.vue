@@ -9,14 +9,14 @@
             </div>
         </nav>
         <Home ref="Section1" />
-        <Section2 ref="Section2" />
+        <About ref="Section2" />
         <Section3 ref="Section3" />
         <Section4 ref="Section4" />
     </div>
 </template>
 <script>
 import Home from './components/Home.vue';
-import Section2 from './components/Section2.vue';
+import About from './components/About.vue';
 import Section3 from './components/Section3.vue';
 import Section4 from './components/Section4.vue';
 
@@ -61,7 +61,7 @@ export default {
     },
     components: {
         Home,
-        Section2,
+        About,
         Section3,
         Section4,
     },
