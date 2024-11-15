@@ -1,22 +1,19 @@
 <template>
     <div id="app">
-        <nav class="fixed left-0 top-0 h-full flex flex-col justify-center space-y-4 p-4 z-10">
-            <a @click="scrollToSection(1)"
-                class="hover:cursor-pointer text-gray-200 bg-gray-800 py-2 px-4 rounded-md transition duration-300 hover:bg-gray-900">1</a>
-            <a @click="scrollToSection(2)"
-                class="hover:cursor-pointer text-gray-200 bg-gray-800 py-2 px-4 rounded-md transition duration-300 hover:bg-gray-900">2</a>
-            <a @click="scrollToSection(3)"
-                class="hover:cursor-pointer text-gray-200 bg-gray-800 py-2 px-4 rounded-md transition duration-300 hover:bg-gray-900">3</a>
-            <a @click="scrollToSection(4)"
-                class="hover:cursor-pointer text-gray-200 bg-gray-800 py-2 px-4 rounded-md transition duration-300 hover:bg-gray-900">4</a>
+        <nav class="w-full fixed bottom-5 flex justify-center">
+            <div class="w-[70%] flex justify-center items-end">
+                <a v-for="(section, index) in sections" :key="index" @click="scrollToSection(index + 1)" :class="['w-40 text-center hover:cursor-pointer hover:text-xl transition-all',
+                    currentSection === index + 1 ? 'font-bold' : '']">
+                    {{ section }}
+                </a>
+            </div>
         </nav>
-        <Home ref="Home" />
+        <Home ref="Section1" />
         <Section2 ref="Section2" />
         <Section3 ref="Section3" />
         <Section4 ref="Section4" />
     </div>
 </template>
-
 <script>
 import Home from './components/Home.vue';
 import Section2 from './components/Section2.vue';
@@ -25,16 +22,48 @@ import Section4 from './components/Section4.vue';
 
 export default {
     name: 'App',
+    data() {
+        return {
+            currentSection: 1, // 현재 활성화된 섹션
+            sections: ['Home', 'About', 'Resume', 'Portfolio'], // 네비게이션 텍스트
+        };
+    },
     methods: {
         scrollToSection(sectionNumber) {
-            this.$refs[`Section${sectionNumber}`].$el.scrollIntoView({ behavior: 'smooth' })
+            this.$refs[`Section${sectionNumber}`].$el.scrollIntoView({ behavior: 'smooth' });
+            this.currentSection = sectionNumber; // 클릭한 섹션을 현재 섹션으로 설정
         },
+        updateCurrentSection() {
+            const sectionOffsets = this.sections.map((_, index) => {
+                const section = this.$refs[`Section${index + 1}`];
+                return section.$el.offsetTop;
+            });
+
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+            // 현재 스크롤 위치에 따라 활성화된 섹션 계산
+            for (let i = 0; i < sectionOffsets.length; i++) {
+                if (
+                    scrollPosition >= sectionOffsets[i] &&
+                    (i === sectionOffsets.length - 1 || scrollPosition < sectionOffsets[i + 1])
+                ) {
+                    this.currentSection = i + 1;
+                    break;
+                }
+            }
+        },
+    },
+    mounted() {
+        window.addEventListener('scroll', this.updateCurrentSection);
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.updateCurrentSection);
     },
     components: {
         Home,
         Section2,
         Section3,
         Section4,
-    }
-}
+    },
+};
 </script>
