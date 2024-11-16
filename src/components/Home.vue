@@ -39,9 +39,15 @@ export default {
         onMounted(() => {
             if (typing.value) {
                 typedInstance = new Typed(typing.value, {
-                    strings: ['Hello, World!'],
-                    typeSpeed: 50,
-                    backSpeed: 30,
+                    strings: [
+                        '&lt;?php echo "Hello, World!" ?&gt;',
+                        'console.log("Hello, World!")',
+                        'System.out.println("Hello, World!")',
+                        '&lt;body&gt;Hello, World!&lt;/body&gt;',
+                        'SELECT "Hello, World!"',
+                    ],
+                    typeSpeed: 30,
+                    backSpeed: 20,
                     loop: true,
                 });
             }
