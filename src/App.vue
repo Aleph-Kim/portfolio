@@ -10,14 +10,14 @@
         </nav>
         <Home ref="Section1" />
         <About ref="Section2" />
-        <Section3 ref="Section3" />
+        <Career ref="Section3" />
         <Section4 ref="Section4" />
     </div>
 </template>
 <script>
 import Home from './components/Home.vue';
 import About from './components/About.vue';
-import Section3 from './components/Section3.vue';
+import Career from './components/Career.vue';
 import Section4 from './components/Section4.vue';
 
 export default {
@@ -25,7 +25,7 @@ export default {
     data() {
         return {
             currentSection: 1, // 현재 활성화된 섹션
-            sections: ['Home', 'About', 'Resume', 'Portfolio'], // 네비게이션 텍스트
+            sections: ['Home', 'About', 'Career', 'Portfolio'], // 네비게이션 텍스트
         };
     },
     methods: {
@@ -62,7 +62,7 @@ export default {
     components: {
         Home,
         About,
-        Section3,
+        Career,
         Section4,
     },
 };
