@@ -40,11 +40,11 @@ export default {
             if (typing.value) {
                 typedInstance = new Typed(typing.value, {
                     strings: [
-                        '&lt;?php echo "Hello, World!" ?&gt;',
-                        'console.log("Hello, World!")',
-                        'System.out.println("Hello, World!")',
-                        '&lt;body&gt;Hello, World!&lt;/body&gt;',
-                        'SELECT "Hello, World!"',
+                        '<span class="text-blue-600">&lt;?php echo "Hello, World!" ?&gt;</span>',
+                        '<span class="text-yellow-500">console.log("Hello, World!")</span>',
+                        '<span class="text-blue-500">System.out.println("Hello, World!")</span>',
+                        '<span class="text-red-600">&lt;body&gt;Hello, World!&lt;/body&gt;</span>',
+                        '<span class="text-[#4C7B9C]">SELECT "Hello, World!"</span>',
                     ],
                     typeSpeed: 30,
                     backSpeed: 20,
