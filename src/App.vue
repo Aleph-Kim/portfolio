@@ -16,7 +16,7 @@
                 </svg>
             </div>
         </span>
-        <nav
+        <nav @mouseenter="showNavbar()" @mouseleave="briefShowNavbar()"
             :class="['w-full fixed bottom-0 flex justify-center bg-white/70 dark:bg-[#181818]/70 h-14 transition-all ease-[ease] duration-500', { 'opacity-0 pointer-events-none': !isNavbarVisible }]">
             <div class="w-[70%] flex justify-center items-center">
                 <a v-for="(section, index) in sections" :key="index" @click="scrollToSection(index + 1)" :class="['w-40 text-center hover:cursor-pointer hover:text-xl transition-all',
@@ -97,12 +97,16 @@ export default {
             }
         },
         showNavbar() {
-            this.isNavbarVisible = true; // 스크롤 발생 시 네비게이션 바 표시
+            this.isNavbarVisible = true;
 
             // 기존 타이머가 있으면 초기화
             if (this.scrollTimeout) {
                 clearTimeout(this.scrollTimeout);
             }
+        },
+        briefShowNavbar() {
+            // 스크롤 발생 시 네비게이션 바 표시
+            this.showNavbar();
 
             // 일정 시간 이후 네비게이션 바 숨기기
             this.scrollTimeout = setTimeout(() => {
@@ -112,15 +116,16 @@ export default {
     },
     mounted() {
         this.checkTheme(); // 페이지 로드 시 다크 모드 상태 확인
+
         window.addEventListener('scroll', () => {
             this.updateCurrentSection();
-            this.showNavbar();
+            this.briefShowNavbar();
         });
     },
     beforeDestroy() {
         window.removeEventListener('scroll', () => {
             this.updateCurrentSection();
-            this.showNavbar();
+            this.briefShowNavbar();
         });
     },
     components: {
