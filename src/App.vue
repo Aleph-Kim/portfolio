@@ -25,10 +25,10 @@
                 </a>
             </div>
         </nav>
-        <Home ref="Section1" />
-        <About ref="Section2" />
-        <Career ref="Section3" />
-        <Section4 ref="Section4" />
+        <Home ref="Section1" class="container mx-auto"/>
+        <About ref="Section2"  class="container mx-auto"/>
+        <Career ref="Section3"  class="container mx-auto"/>
+        <Section4 ref="Section4"  class="container mx-auto"/>
     </div>
 </template>
 
