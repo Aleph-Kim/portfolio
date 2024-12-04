@@ -28,43 +28,40 @@
                 <div class="mb-5">
                     <h3 class="text-xl mb-2 font-bold">Backend</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-600 text-white px-3 py-1 rounded-xl">PHP</span>
-                        <span class="bg-[#E64122] text-white px-3 py-1 rounded-xl">Laravel</span>
-                        <span class="bg-[#3EADD1] text-white px-3 py-1 rounded-xl">Yii Framework</span>
-                        <span class="bg-[#E64122] text-white px-3 py-1 rounded-xl">CodeIgniter</span>
-                        <span class="bg-blue-500 text-white px-3 py-1 rounded-xl">Java</span>
-                        <span class="bg-green-500 text-white px-3 py-1 rounded-xl">Spring Boot</span>
-                        <span class="bg-[#649F55] text-white px-3 py-1 rounded-xl">Node.js</span>
-                        <span class="bg-black text-white px-3 py-1 rounded-xl">Express.js</span>
-                        <span class="bg-[#4C7B9C] text-white px-3 py-1 rounded-xl">Mysql</span>
+                        <Skill
+                            v-for="skill in ['PHP', 'Laravel', 'YII Framework', 'CodeIgniter', 'Java', 'Spring Boot', 'Node.js', 'Express.js', 'MySQL',]"
+                            :key="skill" :name="skill" />
                     </div>
                 </div>
 
                 <div class="mb-5">
                     <h3 class="text-xl mb-2 font-bold"> Frontend</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-red-500 text-white px-3 py-1 rounded-xl">HTML</span>
-                        <span class="bg-blue-500 text-white px-3 py-1 rounded-xl">CSS</span>
-                        <span class="bg-teal-400 text-white px-3 py-1 rounded-xl">Tailwind CSS</span>
-                        <span class="bg-teal-500 text-white px-3 py-1 rounded-xl">Daisy UI</span>
-                        <span class="bg-yellow-500 text-white px-3 py-1 rounded-xl">JavaScript</span>
-                        <span class="bg-blue-700 text-white px-3 py-1 rounded-xl">jQuery</span>
-                        <span class="bg-green-600 text-white px-3 py-1 rounded-xl">Vue.js</span>
+                        <Skill
+                            v-for="skill in ['HTML', 'CSS', 'Tailwind CSS', 'Daisy UI', 'JavaScript', 'jQuery', 'Vue.js']"
+                            :key="skill" :name="skill" />
                     </div>
                 </div>
 
                 <div class="mb-5">
                     <h3 class="text-xl mb-2 font-bold">DevOps</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-orange-500 text-white px-3 py-1 rounded-xl">AWS</span>
-                        <span class="bg-blue-600 text-white px-3 py-1 rounded-xl">GCP</span>
-                        <span class="bg-indigo-600 text-white px-3 py-1 rounded-xl">Docker</span>
-                        <span class="bg-[#CC3631] text-white px-3 py-1 rounded-xl">Jenkins</span>
-                        <span class="bg-green-600 text-white px-3 py-1 rounded-xl">Nginx</span>
-                        <span class="bg-gray-800 text-white px-3 py-1 rounded-xl">GitHub</span>
+                        <Skill v-for="skill in ['AWS', 'GCP', 'Docker', 'Jenkins', 'Nginx', 'GitHub']" :key="skill"
+                            :name="skill" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<script>
+import Skill from './Skill.vue';
+
+export default {
+    name: 'About',
+    components: {
+        Skill
+    }
+}
+</script>
