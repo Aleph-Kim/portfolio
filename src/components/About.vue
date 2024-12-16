@@ -25,7 +25,7 @@
             <h2 class="text-4xl font-bold text-center mb-10">Skills</h2>
 
             <div class="flex flex-col ml-3">
-                <div class="mb-5">
+                <div class="mb-5" data-aos="fade-left">
                     <h3 class="text-xl mb-2 font-bold">Backend</h3>
                     <div class="flex flex-wrap gap-2">
                         <Skill
@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-                <div class="mb-5">
+                <div class="mb-5" data-aos="fade-right">
                     <h3 class="text-xl mb-2 font-bold"> Frontend</h3>
                     <div class="flex flex-wrap gap-2">
                         <Skill
@@ -43,7 +43,7 @@
                     </div>
                 </div>
 
-                <div class="mb-5">
+                <div class="mb-5" data-aos="fade-left">
                     <h3 class="text-xl mb-2 font-bold">DevOps</h3>
                     <div class="flex flex-wrap gap-2">
                         <Skill v-for="skill in ['AWS', 'GCP', 'Docker', 'Jenkins', 'Nginx', 'GitHub']" :key="skill"

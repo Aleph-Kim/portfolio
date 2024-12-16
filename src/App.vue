@@ -25,10 +25,10 @@
                 </a>
             </div>
         </nav>
-        <Home ref="Section1" class="container mx-auto"/>
-        <About ref="Section2"  class="container mx-auto"/>
-        <Career ref="Section3"  class="container mx-auto"/>
-        <Section4 ref="Section4"  class="container mx-auto"/>
+        <Home ref="Section1" class="container mx-auto" />
+        <About ref="Section2" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" />
+        <Career ref="Section3" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" />
+        <Project ref="Section4" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" />
     </div>
 </template>
 
@@ -132,7 +132,7 @@ export default {
         Home,
         About,
         Career,
-        Section4,
+        Project,
     },
 };
 </script>
