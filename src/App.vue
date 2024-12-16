@@ -36,14 +36,14 @@
 import Home from './components/Home.vue';
 import About from './components/About.vue';
 import Career from './components/Career.vue';
-import Section4 from './components/Section4.vue';
+import Project from './components/Project.vue';
 
 export default {
     name: 'App',
     data() {
         return {
             currentSection: 1, // 현재 활성화된 섹션
-            sections: ['Home', 'About', 'Career', 'Portfolio'], // 네비게이션 텍스트
+            sections: ['Home', 'About', 'Career', 'Project'], // 네비게이션 텍스트
             isNavbarVisible: true, // 네비게이션 노출 여부
             scrollTimeout: null, // 타이머 ID
             isDarkMode: false,  // 다크 모드 상태
