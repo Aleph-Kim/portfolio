@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" class="overflow-x-hidden">
         <span @click="toggleDarkMode" class="fixed top-3 right-3 w-7 h-7 cursor-pointer">
             <div v-if="isDarkMode">
                 <!-- 달 아이콘 -->
