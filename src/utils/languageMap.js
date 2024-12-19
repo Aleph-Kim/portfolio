@@ -22,6 +22,7 @@ export const languageMap = {
     Jenkins: '#D24939',
     Nginx: '#009639',
     GitHub: '#000000',
+    Kotlin: '#651FFF'
 };
 
 // 언어에 해당하는 색상을 반환하는 함수
