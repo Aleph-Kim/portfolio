@@ -27,8 +27,9 @@
         </nav>
         <Home ref="Section1" class="container mx-auto" />
         <About ref="Section2" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" />
-        <Career ref="Section3" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" data-aos-offset="600"/>
-        <Project ref="Section4" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" data-aos-offset="600"/>
+        <Skills ref="Section3" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" />
+        <Career ref="Section4" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" data-aos-offset="600"/>
+        <Project ref="Section5" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" data-aos-offset="600"/>
     </div>
 </template>
 
@@ -36,6 +37,7 @@
 import Home from './components/Home.vue';
 import About from './components/About.vue';
 import Career from './components/Career.vue';
+import Skills from './components/Skills.vue';
 import Project from './components/Project.vue';
 import consoleAleph from './utils/consoleAleph'; 
 
@@ -44,7 +46,7 @@ export default {
     data() {
         return {
             currentSection: 1, // 현재 활성화된 섹션
-            sections: ['Home', 'About', 'Career', 'Project'], // 네비게이션 텍스트
+            sections: ['Home', 'About', 'Skills', 'Career', 'Project'], // 네비게이션 텍스트
             isNavbarVisible: true, // 네비게이션 노출 여부
             scrollTimeout: null, // 타이머 ID
             isDarkMode: false,  // 다크 모드 상태
@@ -133,6 +135,7 @@ export default {
     components: {
         Home,
         About,
+        Skills,
         Career,
         Project,
     },
