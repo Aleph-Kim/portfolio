@@ -1,5 +1,4 @@
-// languageMap 데이터
-export const languageMap = {
+export const languageColor = {
     PHP: '#777BB4',
     Laravel: '#FF2D20',
     'YII Framework': '#D8583E',
@@ -23,9 +22,4 @@ export const languageMap = {
     Nginx: '#009639',
     GitHub: '#000000',
     Kotlin: '#651FFF'
-};
-
-// 언어에 해당하는 색상을 반환하는 함수
-export function getLanguageColor(name) {
-    return languageMap[name] || '#CCCCCC';
 }

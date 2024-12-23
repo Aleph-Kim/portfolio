@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { languageMap } from '@/utils/languageMap';
+import { languageColor } from '/public/data/languageColor.js';
 
 export default {
     name: 'Skill',
@@ -17,7 +17,7 @@ export default {
     },
     computed: {
         getColorStyle() {
-            return `background: ${languageMap[this.name]}` || 'background: #CCCCCC';
+            return `background: ${languageColor[this.name]}` || 'background: #CCCCCC';
         },
     },
 };
