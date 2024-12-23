@@ -37,6 +37,7 @@ import Home from './components/Home.vue';
 import About from './components/About.vue';
 import Career from './components/Career.vue';
 import Project from './components/Project.vue';
+import consoleAleph from './utils/consoleAleph'; 
 
 export default {
     name: 'App',
@@ -115,6 +116,7 @@ export default {
         },
     },
     mounted() {
+        consoleAleph(); // 콘솔에 메시지 출력
         this.checkTheme(); // 페이지 로드 시 다크 모드 상태 확인
 
         window.addEventListener('scroll', () => {
