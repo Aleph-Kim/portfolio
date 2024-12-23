@@ -6,21 +6,21 @@
             <JobCard company="글로벌키타" role="풀스택 웹 개발자" period="2023.02 ~ 2024.02 (1년)"
                 description="교육 플랫폼 운영 / 교육 컨텐츠 제작 및 유통 / 교육 컨텐츠 해외 수출 및 해외 플랫폼 사업 투자 등을 하는 교육 업체"
                 :skills="['PHP', 'YII Framework', 'HTML', 'CSS', 'JavaScript', 'jQuery', 'MySQL']" :projects="[
-                    { title: '교육커머스 사이트 edupang 리뉴얼', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aut. Veniam voluptates nostrum voluptatem illo libero voluptatibus autem quibusdam fugiat laborum nam qui, corporis, et, cum officia? Vel, laudantium maiores!' },
-                    { title: 'AIPEN 사이트 개발', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aut. Veniam voluptates nostrum voluptatem illo libero voluptatibus autem quibusdam fugiat laborum nam qui, corporis, et, cum officia? Vel, laudantium maiores!' },
-                    { title: '나눔커머스 사이트 개발', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aut. Veniam voluptates nostrum voluptatem illo libero voluptatibus autem quibusdam fugiat laborum nam qui, corporis, et, cum officia? Vel, laudantium maiores!' },
-                    { title: '리얼티칭 사이트 개발', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aut. Veniam voluptates nostrum voluptatem illo libero voluptatibus autem quibusdam fugiat laborum nam qui, corporis, et, cum officia? Vel, laudantium maiores!' },
-                    { title: '스쿨몰 사이트 개발(사이트 폐쇄)', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aut. Veniam voluptates nostrum voluptatem illo libero voluptatibus autem quibusdam fugiat laborum nam qui, corporis, et, cum officia? Vel, laudantium maiores!' }
+                    { title: '에듀팡 사이트 개발', description: '교육커머스 사이트 \'에듀팡\'의 전면 리뉴얼과 안정적인 유지보수 작업을 통해 사용자 경험과 시스템 성능을 최적화했으며, TEPS 상품 관련 핵심 기능을 설계 및 개발하여 서비스 효율성을 강화했습니다. 또한, 취약점 보안 점검 및 개선을 통해 안전하고 신뢰도 높은 플랫폼 환경을 구축했습니다.', link: 'https://www.edupang.com/'},
+                    { title: 'AIPEN 사이트 개발', description: 'AI 기반 솔루션 \'Aipen\'의 특화 웹사이트를 제작하며 브랜드 아이덴티티를 효과적으로 반영하고, 직관적인 상품 소개와 정보 전달이 가능한 플랫폼을 구현하여 사용자 접근성을 크게 향상시켰습니다.', link: 'https://www.aipen.co.kr/'},
+                    { title: '나눔커머스 사이트 개발', description: '관공서, 학교, 기업을 대상으로 한 커머스 플랫폼 \'나눔커머스\'를 구축하며, SNS 로그인, 판매자 정산 기능 등 주요 비즈니스 프로세스를 효율적으로 구현했습니다. 다양한 기관의 요구를 반영한 맞춤형 쇼핑 환경을 제공하여 플랫폼의 실용성과 사용자 만족도를 높였습니다.', link: 'https://esg-mall.com/'},
+                    { title: '리얼티칭 사이트 개발', description: '온라인 강의 소개 플랫폼 \'리얼티칭\' 개발 프로젝트에서 사용자 친화적인 UI/UX를 설계하고, 강의 검색, 상세 정보 제공, 사용자 리뷰 작성 등 다양한 핵심 기능을 구현하며, 설계와 개발 전 과정을 성공적으로 수행했습니다.', link: 'https://www.realteaching.co.kr/'},
+                    { title: '스쿨몰 사이트 개발', description: '학교와 교육 기관을 대상으로 한 물품 판매 플랫폼 \'스쿨몰\' 개발 프로젝트에 참여하여, 상품 검색, 대량 주문 관리, 견적 요청 및 문의 기능, 결제 및 정산 시스템 등 주요 기능을 구현했습니다. 확장성과 안정성을 고려한 아키텍처 설계에 기여하고, 관리자 페이지를 통해 상품 관리와 주문 처리 기능을 지원하며 플랫폼 운영의 효율성을 크게 향상시켰습니다.'}
                 ]" titleColor="text-[#142986]" />
             <JobCard company="멋쟁이사자처럼" role="프리랜서 보조강사" period="2024.04 ~ 2024.09 (5개월)"
                 description="코딩 교육, 개발자 양성, IT 커뮤니티 운영 등을 하는 교육 업체" :skills="['Java', 'Spring Boot', 'MySQL']"
                 :projects="[
-                    { title: '백엔드 스쿨 10기 과정 보조강사', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aut. Veniam voluptates nostrum voluptatem illo libero voluptatibus autem quibusdam fugiat laborum nam qui, corporis, et, cum officia? Vel, laudantium maiores!' }
+                    { title: '백엔드 스쿨 10기 과정 보조강사', description: '\'멋쟁이사자처럼 백엔드 Java 부트캠프\'에서 보조강사로 활동하며, 수강생들의 Java 및 Spring 기반 백엔드 개발 학습을 지원하고, 실무 프로젝트와 과제에 대한 코드 리뷰 및 피드백을 제공했습니다. 또한, 기술적 조언과 최적화 방안을 제시하여 수강생들의 실무 적용 능력과 프로젝트 성과를 향상시키는 데 기여했습니다.', link: 'https://likelion.net/school/kdt-backendj-10th'}
                 ]" titleColor="text-[#FF7710]" />
             <JobCard company="(주)그렙" role="프리랜서 보조강사" period="2024.12 ~ 2025.04 (5개월)"
                 description="개발자 생애 주기에 맞는 교육, 평가, 채용 서비스를 통해 개발자들의 성장을 지원하며, 소프트웨어 가치의 사회적 확산에 기여하는 교육 업체" :skills="['Java', 'Kotlin', 'Spring Boot', 'MySQL']"
                 :projects="[
-                    { title: '웹 백엔드 4기 과정 퍼실리테이터', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aut. Veniam voluptates nostrum voluptatem illo libero voluptatibus autem quibusdam fugiat laborum nam qui, corporis, et, cum officia? Vel, laudantium maiores!' }
+                    { title: '웹 백엔드 4기 과정 퍼실리테이터', description: '\'프로그래머스 클라우드 기반 백엔드 엔지니어링 부트캠프\'에서 보조강사로 활동하며, 수강생들이 Java와 Spring 기술을 효과적으로 학습할 수 있도록 실습과 프로젝트를 지원하고, 문제 해결을 위한 기술적 조언과 방향성을 제공했습니다. 팀 프로젝트 협업 능력 향상을 위한 가이드라인을 제시하며 수강생들의 실무 역량 강화를 도왔습니다.', link: 'https://school.programmers.co.kr/learn/courses/24767/24767-4%EA%B8%B0-k-digital-training-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B8%B0%EB%B0%98-%EB%B0%B1%EC%97%94%EB%93%9C-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81'}
                 ]" titleColor="text-[#3E0499]" />
         </div>
     </section>
