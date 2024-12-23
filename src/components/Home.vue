@@ -5,17 +5,17 @@
                 <span ref="typing" class="font-bold"></span>
             </div>
             <div class="text-2xl">
-                개발이 즐거운 김채민 개발자입니다 😁
+                {{ homeData.title }}
             </div>
             <div class="flex justify-center items-center mt-5 w-full">
-                <a href="https://dev-kimchi.tistory.com" target="blank"
+                <a :href=homeData.blog target="blank"
                     class="text-xl mr-2 transition-all duration-500 w-12 h-12 flex justify-center items-center rounded-2xl text-[var(--color-text)] hover:bg-[var(--color-text)] hover:text-[var(--color-background);]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="M0 3a3 3 0 1 0 6 0a3 3 0 0 0-6 0m9 18a3 3 0 1 0 6 0a3 3 0 0 0-6 0m0-9a3 3 0 1 0 6 0a3 3 0 0 0-6 0m0-9a3 3 0 1 0 6 0a3 3 0 0 0-6 0m9 0a3 3 0 1 0 6 0a3 3 0 0 0-6 0" />
                     </svg>
                 </a>
-                <a href="https://github.com/aleph-kim" target="blank"
+                <a :href=homeData.github target="blank"
                     class="text-2xl transition-all duration-500 w-12 h-12 flex justify-center items-center rounded-2xl text-[var(--color-text)] hover:bg-[var(--color-text)] hover:text-[var(--color-background);]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -31,7 +31,14 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue';
 import Typed from 'typed.js';
 
+import { homeData, typingStrings } from '/public/data/home';
+
 export default {
+    data() {
+        return {
+            homeData: homeData
+        }
+    },
     setup() {
         const typing = ref(null);
         let typedInstance;
@@ -39,13 +46,7 @@ export default {
         onMounted(() => {
             if (typing.value) {
                 typedInstance = new Typed(typing.value, {
-                    strings: [
-                        '<span class="text-blue-600">&lt;?php echo "Hello, World!" ?&gt;</span>',
-                        '<span class="text-yellow-500">console.log("Hello, World!")</span>',
-                        '<span class="text-blue-500">System.out.println("Hello, World!")</span>',
-                        '<span class="text-red-600">&lt;body&gt;Hello, World!&lt;/body&gt;</span>',
-                        '<span class="text-[#4C7B9C]">SELECT "Hello, World!"</span>',
-                    ],
+                    strings: typingStrings,
                     typeSpeed: 30,
                     backSpeed: 20,
                     loop: true,
