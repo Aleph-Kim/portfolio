@@ -22,7 +22,7 @@
 
         <!-- Skills -->
         <div class="mt-40">
-            <h2 class="text-4xl font-bold text-center mb-10" data-aos="fade-down" data-aos-offset="500">Skills</h2>
+            <h2 class="text-4xl font-bold text-center mb-10" data-aos="fade-down" data-aos-offset="400">Skills</h2>
 
             <div class="flex flex-col ml-3">
                 <div class="mb-5" data-aos="fade-left" data-aos-offset="500">
