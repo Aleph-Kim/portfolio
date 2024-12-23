@@ -24,9 +24,17 @@ export const projectsData = [
     },
     {
         "id": 4,
+        "title": "Aleph's Portfoilo Website",
+        "image": "/image/meta-preview.png",
+        "description": "김채민 개발자의 포트폴리오 웹사이트",
+        "link": "https://aleph-kim.netlify.app/",
+        "github": "https://github.com/Aleph-Kim/portfolio"
+    },
+    {
+        "id": 5,
         "title": "Korean Quote Open API(진행 중)",
         "image": "/image/project/korean-quote.png",
         "description": "한글 명언을 제공하는 Open API",
         "github": "https://github.com/Aleph-Kim/korean-quote"
-    }
+    },
 ]
