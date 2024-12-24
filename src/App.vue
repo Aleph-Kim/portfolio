@@ -26,8 +26,8 @@
             </div>
         </nav>
         <Home ref="Section1" class="container mx-auto" />
-        <About ref="Section2" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" />
-        <Skills ref="Section3" class="container mx-auto" data-aos="fade-down" />
+        <About ref="Section2" class="container mx-auto" data-aos="fade-down" data-aos-duration="800"/>
+        <Skills ref="Section3" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" data-aos-offset="600"/>
         <Career ref="Section4" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" data-aos-offset="600"/>
         <Project ref="Section5" class="container mx-auto" data-aos="fade-down" data-aos-duration="800" data-aos-offset="600"/>
     </div>
