@@ -10,4 +10,5 @@ export const typingStrings = [
     '<span class="text-blue-500">System.out.println("Hello, World!")</span>',
     '<span class="text-red-600">&lt;body&gt;Hello, World!&lt;/body&gt;</span>',
     '<span class="text-[#4C7B9C]">SELECT "Hello, World!"</span>',
+    '<span class="text-[#3776AB]">print("Hello, World!")</span>'
 ];
