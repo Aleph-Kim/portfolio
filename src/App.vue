@@ -1,6 +1,6 @@
 <template>
     <div id="app" class="overflow-x-hidden">
-        <span @click="toggleDarkMode" class="fixed top-3 right-3 w-7 h-7 cursor-pointer">
+        <span @click="toggleDarkMode" class="fixed top-3 right-3 w-7 h-7 cursor-pointer z-10">
             <div v-if="isDarkMode">
                 <!-- 달 아이콘 -->
                 <svg className="bg-black" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
