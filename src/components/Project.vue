@@ -5,7 +5,7 @@
             <h2 class="text-4xl font-bold text-center mb-10">Project</h2>
 
             <!-- Projects Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-3 md:px-0">
                 <a v-for="project in projects" :key="project.id"
                     class="relative rounded-lg overflow-hidden text-[var(--color-text)] no-underline hover:bg-opacity-30">
                     <!-- Image -->
