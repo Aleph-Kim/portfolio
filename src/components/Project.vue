@@ -17,6 +17,9 @@
                         <h2 class="text-lg font-bold mb-2">{{ project.title }}</h2>
                         <p class="text-gray-600">{{ project.description }}</p>
                     </div>
+                    <div class="p-4 flex flex-wrap gap-2">
+                        <Skill v-for="skill in project.skills" :key="skill" :name="skill" />
+                    </div>
                     <!-- Link -->
                     <div
                         class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30">
@@ -46,7 +49,12 @@
 
 <script>
 import { projectsData } from '/public/data/projects';
+import Skill from './Skill.vue';
+
 export default {
+    components: {
+        Skill
+    },
     data() {
         return {
             projects: projectsData

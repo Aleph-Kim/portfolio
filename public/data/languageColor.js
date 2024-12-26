@@ -7,6 +7,7 @@ export const languageColor = {
     'Spring Boot': '#6DB33F',
     'Node.js': '#339933',
     'Express.js': '#000000',
+    'Python': '#3776AB',
     MySQL: '#00758F',
     HTML: '#E34F26',
     CSS: '#1572B6',
@@ -19,6 +20,8 @@ export const languageColor = {
     GCP: '#4285F4',
     Docker: '#2496ED',
     Jenkins: '#D24939',
+    Bash: '#228B22',
+    YAML: '#FFCC00',
     Nginx: '#009639',
     GitHub: '#000000',
     Kotlin: '#651FFF'
