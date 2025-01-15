@@ -41,6 +41,7 @@ export const projectsData = [
         "description": "한글 명언을 제공하는 Open API",
         "skills": ["PHP", "Express.js", "Tailwind CSS", "Daisy UI"],
         "skills": ["Node.js", "Express.js", "Docker", "Nginx", "GCP", "GitHub"],
+        "link": "https://quote.aleph.kr/api-docs/",
         "github": "https://github.com/Aleph-Kim/korean-quote"
     },
 ]
