@@ -36,11 +36,10 @@ export const projectsData = [
     },
     {
         "id": 5,
-        "title": "Korean Quote Open API(진행 중)",
+        "title": "Korean Quote Open API",
         "image": "/image/project/korean-quote.png",
         "description": "한글 명언을 제공하는 Open API",
-        "skills": ["PHP", "Express.js", "Tailwind CSS", "Daisy UI"],
-        "skills": ["Node.js", "Express.js", "Docker", "Nginx", "GCP", "GitHub"],
+        "skills": ["Node.js", "Express.js", "Tailwind CSS", "Docker", "Nginx", "GCP", "GitHub"],
         "link": "https://quote.aleph.kr/api-docs/",
         "github": "https://github.com/Aleph-Kim/korean-quote"
     },
