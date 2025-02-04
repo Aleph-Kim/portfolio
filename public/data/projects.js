@@ -43,4 +43,13 @@ export const projectsData = [
         "link": "https://quote.aleph.kr/api-docs/",
         "github": "https://github.com/Aleph-Kim/korean-quote"
     },
+    {
+        "id": 6,
+        "title": "Itzip",
+        "image": "/image/project/itzip.png",
+        "description": "개발자 취준생 플랫폼(User 백엔드 기능 담당)",
+        "skills": ["Java", "Spring Boot", "Docker", "Nginx", "AWS", "GCP", "Jenkins", "GitHub"],
+        "link": "http://3.39.78.0:8080/api/swagger-ui/index.html",
+        "github": "https://github.com/iTZipProject/itzip_back"
+    },
 ]
