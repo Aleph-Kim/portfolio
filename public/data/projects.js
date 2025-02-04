@@ -4,7 +4,7 @@ export const projectsData = [
         "title": "Korean Quote Open API",
         "image": "/image/project/korean-quote.png",
         "description": "한글 명언을 제공하는 Open API",
-        "skills": ["Node.js", "Express.js", "Tailwind CSS", "Docker", "Nginx", "GCP", "GitHub"],
+        "skills": ["Node.js", "Express.js", "Tailwind CSS", "PostgreSQL", "Docker", "Nginx", "GCP", "GitHub"],
         "link": "https://quote.aleph.kr/api-docs/",
         "github": "https://github.com/Aleph-Kim/korean-quote"
     },
@@ -13,7 +13,7 @@ export const projectsData = [
         "title": "Share Timer",
         "image": "/image/project/timer.png",
         "description": "함께 실시간으로 타이머를 공유하고 확인할 수 있는 기능을 제공하는 웹사이트",
-        "skills": ["Node.js", "Express.js", "Tailwind CSS", "Daisy UI", "Docker", "Nginx", "GCP", "GitHub"],
+        "skills": ["Node.js", "Express.js", "Tailwind CSS", "Daisy UI", "PostgreSQL", "Docker", "Nginx", "GCP", "GitHub"],
         "github": "https://github.com/Aleph-Kim/share-timer",
         "link": "https://timer.aleph.kr/"
     },

@@ -9,6 +9,7 @@ export const languageColor = {
     'Express.js': '#000000',
     'Python': '#3776AB',
     MySQL: '#00758F',
+    PostgreSQL: '#31638C',
     HTML: '#E34F26',
     CSS: '#1572B6',
     'Tailwind CSS': '#06B6D4',
