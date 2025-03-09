@@ -25,5 +25,6 @@ export const languageColor = {
     YAML: '#FFCC00',
     Nginx: '#009639',
     GitHub: '#000000',
-    Kotlin: '#651FFF'
+    Kotlin: '#651FFF',
+    Go: '#00ADD8',
 }

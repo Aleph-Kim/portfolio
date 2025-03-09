@@ -15,5 +15,6 @@ module.exports = {
         'text-red-600',
         'text-[#4C7B9C]',
         'text-[#3776AB]',
+        'text-[#00ADD8]',
     ],
 }
