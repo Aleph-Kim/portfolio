@@ -19,6 +19,7 @@ export const languageColor = {
     'Vue.js': '#4FC08D',
     AWS: '#FF9900',
     GCP: '#4285F4',
+    OCI: '#f80000',
     Docker: '#2496ED',
     Jenkins: '#D24939',
     Bash: '#228B22',

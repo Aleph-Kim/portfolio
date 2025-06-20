@@ -1,7 +1,7 @@
 export const skillsData = [
     {
         category: "Backend",
-        skills: ["PHP", "Laravel", "YII Framework", "CodeIgniter", "Java", "Spring Boot", "Node.js", "Express.js", "Go", "MySQL"]
+        skills: ["PHP", "Laravel", "YII Framework", "CodeIgniter", "Java", "Spring Boot", "MySQL"]
     },
     {
         category: "Frontend",
@@ -9,6 +9,6 @@ export const skillsData = [
     },
     {
         category: "DevOps",
-        skills: ["AWS", "GCP", "Docker", "Jenkins", "Nginx", "GitHub"]
+        skills: ["AWS", "OCI", "Docker", "Nginx", "GitHub"]
     }
 ];
