@@ -82,3 +82,12 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+@font-face {
+    font-family: 'coding-font';
+    src: url('/fonts/coding.ttf') format('truetype');
+}
+
+.coding-font {
+    font-family: 'coding-font';
+}

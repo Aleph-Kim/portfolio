@@ -1,10 +1,10 @@
 <template>
     <div class="section h-screen flex items-center justify-center flex-col">
-        <div class="flex flex-col">
-            <div class="text-xl">
-                <span ref="typing" class="font-bold"></span>
+        <div class="flex flex-col w-full items-center">
+            <div class="text-3xl mx-10">
+                <span ref="typing" class="font-bold coding-font"></span>
             </div>
-            <div class="text-2xl">
+            <div class="text-2xl mt-5">
                 {{ homeData.title }}
             </div>
             <div class="flex justify-center items-center mt-5 w-full">
