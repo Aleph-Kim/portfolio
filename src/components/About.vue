@@ -15,12 +15,12 @@
                     <p class="mb-3"><span class="font-bold">생년월일:</span> {{ about.birthday }}</p>
                     <p class="mb-3"><span class="font-bold">이메일:</span> {{ about.email }}</p>
                     <p class="mb-3">
-                        <span class="font-bold">깃허브 주소:</span>
-                        <a :href="about.github" target="_blank">{{ about.github }}</a>
+                        <span class="font-bold">깃허브 주소: </span>
+                        <a :href="about.github" target="_blank" class="text-blue-600 hover:text-blue-800 transition">{{ about.github }}</a>
                     </p>
                     <p class="mb-3">
-                        <span class="font-bold">블로그 주소:</span>
-                        <a :href="about.blog" target="_blank">{{ about.blog }}</a>
+                        <span class="font-bold">블로그 주소: </span>
+                        <a :href="about.blog" target="_blank" class="text-blue-600 hover:text-blue-800 transition">{{ about.blog }}</a>
                     </p>
                 </div>
             </div>
