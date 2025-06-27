@@ -117,14 +117,48 @@ export default {
         isOpen(newValue) {
             if (newValue) {
                 document.body.style.overflow = 'hidden';
+                this.addEscListener();
             } else {
                 document.body.style.overflow = '';
+                this.removeEscListener();
             }
         }
     },
+    mounted() {
+        if (this.isOpen) {
+            this.addEscListener();
+        }
+    },
+    beforeUnmount() {
+        this.removeEscListener();
+    },
     methods: {
+        /**
+         * projectModal을 닫는 함수
+         */
         closeModal() {
             this.$emit('close');
+        },
+        /**
+         * ESC 키 입력 시 projectModal을 닫는 이벤트 리스너 등록
+         */
+        addEscListener() {
+            window.addEventListener('keydown', this.handleEsc);
+        },
+        /**
+         * ESC 키 이벤트 리스너 제거
+         */
+        removeEscListener() {
+            window.removeEventListener('keydown', this.handleEsc);
+        },
+        /**
+         * keydown 이벤트에서 ESC 키를 감지하여 projectModal을 닫는 함수 호출
+         * @param {KeyboardEvent} event
+         */
+        handleEsc(event) {
+            if (event.key === 'Escape') {
+                this.closeModal();
+            }
         }
     }
 };
