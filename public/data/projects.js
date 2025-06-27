@@ -56,29 +56,56 @@ export const projectsData = [
         "id": 1,
         "title": "Itzip",
         "image": "/image/project/itzip.png",
-        "description": "개발자 취준생 플랫폼(User 백엔드 기능 담당)",
-        "skills": ["Java", "Spring Boot", "Docker", "Nginx", "AWS", "GCP", "Jenkins", "GitHub"],
+        "description": "개발자 취준생 플랫폼",
+        "skills": ["Java", "Spring Boot", "MySQL", "Redis", "Docker", "Nginx", "AWS", "GCP", "Jenkins", "GitHub"],
         "link": "http://itzip.co.kr/api",
         "github": "https://github.com/iTZipProject/itzip_back",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "people": "백엔드: 4명 , 프론트 4명 , 디저이너 2명",
+        "summary": "개발자 취업 준비 과정에서 느꼈던 여러 불편함을 해결하고, 더 나은 경험을 제공하기 위해 개발한 개발자 취업 준비생 플랫폼",
+        "people": "백엔드: 4명 , 프론트 4명 , 디자이너 2명",
+        "period": "2024.06 ~ 2024.12 (약 6개월)",
         "features": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        ],
-        "development": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        ],
-        "solutions": [
             {
-                "problem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "solution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "title": "프로젝트 협업 환경 구축",
+                "description": [
+                    "요구 사항 정의서, 전체 ERD 구축",
+                    "Discord, Github Wiki, Notion 커뮤니케이션 및 협업 환경 구축",
+                    "백엔드 github convention, wiki, issue 관리 방법 작성 및 적용",
+                ]
             },
             {
-                "problem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "solution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "title": "배포 시 에러 발생율 저하를 위한 테스트 코드 도입",
+                "description": [
+                    "테스트 코드 가이드라인 작성",
+                    "단위 테스트 및 Repository 테스트 코드 작성",
+                    "배포 시, github action에서 테스트 동작을 자동으로 진행하여 배포 후 에러 발생율 저하",
+                ]
+            },
+            {
+                "title": "백엔드 회원 기능 담당",
+                "description": [
+                    "회원가입, 이메일 인증, 로그인, 회원 정보 수정, 비밀번호 재설정 등 기본 회원 기능 구현",
+                    "JWT 토큰 발급 및 검증 기능 구현",
+                    "SNS 로그인(깃허브, 구글) 기능 구현"
+                ]
+            },
+            {
+                "title": "로그 모니터링 시스템 구축",
+                "description": [
+                    "로그를 효과적으로 수집, 분석, 시각화하기 위해 Elasticsearch와 Kibana를 활용한 고급 모니터링 시스템을 구축",
+                ]
+            },
+            {
+                "title": "프로젝트 Github 알림 봇 개발",
+                "description": [
+                    "GitHub 레포지토리에서 이슈가 발생하거나 업데이트될 때 이를 실시간으로 감지하고 Discord 채널에 즉각적으로 알림을 전송하는 봇 개발",
+                ]
+            },
+            {
+                "title": "프로젝트 AWS 요금 봇 개발",
+                "description": [
+                    "AWS 비용을 매일 자동으로 모니터링하고 Discord 채널에 알림을 전송하는 봇 개발",
+                ]
             }
-        ]
+        ],
     },
 ]

@@ -1,35 +1,21 @@
 <template>
     <section id="projects" class="py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">프로젝트</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">Projects</h2>
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div v-for="project in projects" :key="project.id" 
+                    <div v-for="project in projects" :key="project.id"
                         class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                         <div class="relative">
-                            <img :src="project.image" :alt="project.title" 
-                                class="w-full h-64 object-cover" />
-                            <div class="absolute bottom-0 left-0 right-0 p-6">
-                                <h3 class="text-2xl font-bold text-white mb-3 drop-shadow-lg">{{ project.title }}</h3>
-                                <div class="flex flex-wrap gap-2">
-                                    <span v-for="skill in project.skills.slice(0, 3)" :key="skill"
-                                        class="px-3 py-1 text-sm bg-white/20 text-white rounded-full backdrop-blur-sm">
-                                        {{ skill }}
-                                    </span>
-                                    <span v-if="project.skills.length > 3" 
-                                        class="px-3 py-1 text-sm bg-white/20 text-white rounded-full backdrop-blur-sm">
-                                        +{{ project.skills.length - 3 }}
-                                    </span>
-                                </div>
-                            </div>
+                            <img :src="project.image" :alt="project.title" class="w-full h-64 object-cover" />
                         </div>
                         <div class="p-8">
-                            <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg line-clamp-3">{{ project.description }}</p>
+                            <h3 class="text-2xl font-bold mb-3 drop-shadow-lg">{{ project.title }}</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg line-clamp-3">
+                                {{ project.description }}
+                            </p>
                             <div class="flex flex-wrap gap-3 mb-6">
-                                <span v-for="skill in project.skills" :key="skill"
-                                    class="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
-                                    {{ skill }}
-                                </span>
+                                <Skill v-for="skill in project.skills" :key="skill" :name="skill" />
                             </div>
                             <div class="flex justify-between items-center">
                                 <div class="flex items-center justify-center gap-4">
@@ -42,18 +28,18 @@
                                         </svg>
                                     </a>
                                     <a v-if="project.github" :href="project.github" target="_blank"
-                                    class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24">
+                                        class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24">
                                             <path
                                                 d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974c0 4.406 2.857 8.145 6.821 9.465c.499.09.679-.217.679-.481c0-.237-.008-.865-.011-1.696c-2.775.602-3.361-1.338-3.361-1.338c-.452-1.152-1.107-1.459-1.107-1.459c-.905-.619.069-.605.069-.605c1.002.07 1.527 1.028 1.527 1.028c.89 1.524 2.336 1.084 2.902.829c.091-.645.351-1.085.635-1.334c-2.214-.251-4.542-1.107-4.542-4.93c0-1.087.389-1.979 1.024-2.675c-.101-.253-.446-1.268.099-2.64c0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336a9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021c.545 1.372.203 2.387.099 2.64c.64.696 1.024 1.587 1.024 2.675c0 3.833-2.33 4.675-4.552 4.922c.355.308.675.916.675 1.846c0 1.334-.012 2.41-.012 2.743c0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974C22 6.465 17.535 2 12.026 2z"
                                                 fill="currentColor" />
                                         </svg>
                                     </a>
                                 </div>
-                                <button @click="openModal(project)"
-                                    class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-lg hover:cursor-pointer">
+                                <a @click="openModal(project)"
+                                    class="inline-block px-7 py-2.5 border-2 border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-colors duration-200 cursor-pointer text-base text-center border-solid">
                                     상세 설명
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -67,10 +53,12 @@
 <script>
 import { projectsData } from '/public/data/projects';
 import ProjectModal from './ProjectModal.vue';
+import Skill from './Skill.vue';
 
 export default {
     components: {
-        ProjectModal
+        ProjectModal,
+        Skill
     },
     data() {
         return {

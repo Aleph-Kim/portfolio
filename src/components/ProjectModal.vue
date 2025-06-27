@@ -8,7 +8,7 @@
             <div
                 class="relative bg-white dark:bg-gray-800 rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
                 <!-- 닫기 버튼 -->
-                <button @click="closeModal"
+                <a @click="closeModal"
                     class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-all duration-300 transform hover:cursor-pointer border border-gray-200 dark:border-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 dark:text-gray-300"
                         viewBox="0 0 20 20" fill="currentColor">
@@ -16,7 +16,7 @@
                             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                             clip-rule="evenodd" />
                     </svg>
-                </button>
+                </a>
 
                 <!-- 프로젝트 헤더 -->
                 <div class="p-6 border-b border-gray-200 dark:border-gray-700">
@@ -63,37 +63,31 @@
                 <div class="p-6">
                     <!-- 개요 -->
                     <div class="mb-6">
-                        <h3 class="text-lg font-bold mb-2">프로젝트 개요</h3>
+                        <h3 class="text-xl font-bold mb-2 text-blue-500">프로젝트 개요</h3>
                         <p class="text-gray-600 dark:text-gray-300">{{ project.summary }}</p>
                     </div>
                     <!-- 개발 인원 -->
                     <div class="mb-6">
-                        <h3 class="text-lg font-bold mb-2">개발 인원</h3>
+                        <h3 class="text-xl font-bold mb-2 text-blue-500">개발 인원</h3>
                         <p class="text-gray-600 dark:text-gray-300">{{ project.people }}</p>
                     </div>
 
-                    <!-- 주요 기능 -->
+                    <!-- 프로젝트 기간 -->  
                     <div class="mb-6">
-                        <h3 class="text-lg font-bold mb-2">주요 기능</h3>
-                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
-                            <li v-for="feature in project.features" :key="feature">{{ feature }}</li>
-                        </ul>
+                        <h3 class="text-xl font-bold mb-2 text-blue-500">프로젝트 기간</h3>
+                        <p class="text-gray-600 dark:text-gray-300">{{ project.period }}</p>
                     </div>
 
-                    <!-- 개발 내용 -->
+                    <!-- 프로젝트 기여 -->
                     <div class="mb-6">
-                        <h3 class="text-lg font-bold mb-2">개발 내용</h3>
-                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
-                            <li v-for="item in project.development" :key="item">{{ item }}</li>
-                        </ul>
-                    </div>
-
-                    <!-- 문제 해결 -->
-                    <div class="mb-6">
-                        <h3 class="text-lg font-bold mb-2">문제 해결</h3>
-                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
-                            <li v-for="solution in project.solutions" :key="solution">{{ solution }}</li>
-                        </ul>
+                        <h3 class="text-xl font-bold mb-2 text-blue-500">프로젝트 기여</h3>
+                        <div class="ml-3 mb-2" v-for="feature in project.features" :key="feature.title">
+                            <h4 class="font-semibold">{{ feature.title }}</h4>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+                                <li v-for="description in feature.description" :key="description">{{ description }}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

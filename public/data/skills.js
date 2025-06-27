@@ -1,7 +1,7 @@
 export const skillsData = [
     {
         category: "Backend",
-        skills: ["PHP", "Laravel", "YII Framework", "CodeIgniter", "Java", "Spring Boot", "MySQL"]
+        skills: ["PHP", "Laravel", "YII Framework", "CodeIgniter", "Java", "Spring Boot", "MySQL", "Redis"]
     },
     {
         category: "Frontend",
