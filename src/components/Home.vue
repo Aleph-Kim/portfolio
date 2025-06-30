@@ -1,5 +1,5 @@
 <template>
-    <div class="section h-screen flex items-center justify-center flex-col">
+    <div class="section h-screen flex items-center justify-center flex-col relative">
         <div class="flex flex-col w-full items-center">
             <div class="text-3xl mx-10">
                 <span ref="typing" class="font-bold coding-font"></span>
@@ -24,6 +24,16 @@
                     </svg>
                 </a>
             </div>
+        </div>
+        <div class="absolute bottom-20 pointer-events-none flex flex-col gap-0 items-center">
+            <svg class="w-10 h-10 text-[var(--color-text)] arrow-fade" style="animation-delay: 50ms;" fill="none"
+                stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+            <svg class="w-10 h-10 text-[var(--color-text)] arrow-fade mt-[-25px]" fill="none"
+                stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
         </div>
     </div>
 </template>
