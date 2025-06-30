@@ -43,17 +43,52 @@ export const projectsData = [
     //     "skills": ["Python", "YAML", "Docker", "GitHub"],
     //     "github": "https://github.com/Aleph-Kim/discord-aws-cost-bot"
     // },
-    // {
-    //     "id": 6,
-    //     "title": "Aleph's Portfoilo Website",
-    //     "image": "/image/meta-preview.png",
-    //     "description": "김채민 개발자의 포트폴리오 웹사이트",
-    //     "skills": ["Vue.js", "Tailwind CSS", "GitHub"],
-    //     "link": "https://aleph-kim.netlify.app/",
-    //     "github": "https://github.com/Aleph-Kim/portfolio"
-    // },
     {
         "id": 1,
+        "title": "Aleph's Portfoilo Website",
+        "image": "/image/meta-preview.png",
+        "description": "김채민 개발자의 포트폴리오 웹사이트",
+        "skills": ["Vue.js", "Tailwind CSS", "GitHub"],
+        "link": "https://portfolio.aleph.kr/",
+        "github": "https://github.com/Aleph-Kim/portfolio",
+        "summary": "기존 이력서나 문서 기반 포트폴리오의 한계를 느끼고, 더 유연하고 주도적인 표현 방식을 갖춘 개발자 포트폴리오 사이트가 필요하다고 판단해 직접 개발한 개인 도메인 기반의 포트폴리오 웹사이트",
+        "people": "1인 개발 프로젝트",
+        "period": "2024.11 ~ 2024.12 (약 2개월)",
+        "features": [
+            {
+                "title": "전체 프로젝트 기획 및 디자인",
+                "description": [
+                    "프로젝트 목적 및 기능 구성 기획",
+                    "Home, About, Skill, Career, Project 총 5개의 섹션으로 구성하여 정보 전달 흐름을 구조화",
+                    "각 섹션의 콘텐츠와 기능 구성에 대한 기획 및 화면 디자인"
+                ]
+            },
+            {
+                "title": "퍼블리싱 및 컴포넌트 기반 개발",
+                "description": [
+                    "Tailwind CSS를 사용한 반응형 퍼블리싱",
+                    "Vue 컴포넌트를 기반으로한 재사용성 높은 UI 구조 설계 및 구현",
+                ]
+            },
+            {
+                "title": "콘텐츠 분리 및 확장 가능한 구조 설계",
+                "description": [
+                    "유지보수성과 확장성을 고려한 정적 콘텐츠(JSON)와 프레젠테이션 레이어 분리 구조 개발",
+                    "사용자가 자신의 정보만 수정하면 그대로 활용 가능하도록 템플릿 구조로 개발",
+                ]
+            },
+            {
+                "title": "배포 및 운영 환경 구성",
+                "description": [
+                    "정적 자산 기반의 포트폴리오를 Netlify를 통해 배포",
+                    "GitHub와 연동하여 코드 푸시 시 자동 배포되는 CI 환경 구성",
+                    "사용자 도메인 연결 및 HTTPS 설정 등 운영 환경 최적화"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
         "title": "Itzip",
         "image": "/image/project/itzip.png",
         "description": "개발자 취준생 플랫폼",
@@ -61,7 +96,7 @@ export const projectsData = [
         "link": "http://itzip.co.kr/api",
         "github": "https://github.com/iTZipProject/itzip_back",
         "summary": "개발자 취업 준비 과정에서 느꼈던 여러 불편함을 해결하고, 더 나은 경험을 제공하기 위해 개발한 개발자 취업 준비생 플랫폼",
-        "people": "백엔드: 4명 , 프론트 4명 , 디자이너 2명",
+        "people": "백엔드 4명 , 프론트 4명 , 디자이너 2명",
         "period": "2024.06 ~ 2024.12 (약 6개월)",
         "features": [
             {
