@@ -5,21 +5,25 @@
             <p class="dark:text-gray-400">{{ role }}</p>
             <p class="dark:text-gray-400">{{ period }}</p>
             <p class="mt-2 dark:text-gray-500">{{ description }}</p>
-            <div class="flex flex-wrap gap-2 mt-3">
+            <div class="flex flex-wrap gap-1 md:gap-2 mt-3">
                 <Skill v-for="skill in skills" :key="skill" :name="skill" />
             </div>
         </div>
         <!-- 타임라인 전체 컨테이너 -->
-        <div class="relative" v-for="project in projects" :key="project.title">
+        <div class="relative" v-for="(project, idx) in projects" :key="project.title">
             <!-- 세로선 -->
-            <div class="absolute left-4 top-3 w-[2px] h-full bg-blue-400 dark:bg-blue-500"></div>
+            <div
+                :ref="el => timelineRefs[idx] = el"
+                :class="['absolute left-4 top-3 w-[2px] bg-blue-400 dark:bg-blue-500 transition-all duration-700', timelineActive[idx] ? 'h-full' : 'h-0']"
+                style="will-change: height;"
+            ></div>
             <div class="relative flex pl-9 pb-5">
                 <!-- 써클 -->
                 <div
                     class="absolute left-[9px] top-1 w-4 h-4 bg-white dark:bg-[var(--vt-c-black)] border-solid border-[2px] border-blue-400 dark:border-blue-500 rounded-full z-10 transition duration-500">
                 </div>
                 <!-- 내용 -->
-                <div>
+                <div :class="['transition-all duration-700 opacity-0 translate-y-4', projectActive[idx] ? 'opacity-100 translate-y-0' : '']">
                     <div class="flex items-center">
                         <h3 class="text-blue-700 font-bold text-lg">{{ project.title }}</h3>
                         <!-- 사이트 링크 -->
@@ -38,8 +42,14 @@
                     <p v-if="project.description" class="mt-1 leading-relaxed">
                         {{ project.description }}
                     </p>
-                    <ul v-if="project.stack" class="mt-1 pl-6">
-                        <li v-for="stack in project.stack" class="mt-1">
+                    <ul v-if="project.stack" 
+                        :ref="el => stackRefs[idx] = el"
+                        class="mt-1 pl-6">
+                        <li v-for="(stack, sIdx) in project.stack" 
+                            :key="stack"
+                            :class="['transition-all duration-700 opacity-0 translate-y-4', projectActive[idx] ? 'opacity-100 translate-y-0' : '']"
+                            :style="{ transitionDelay: (sIdx * 15) + 'ms' }"
+                        >
                             {{ stack }}
                         </li>
                     </ul>
@@ -85,6 +95,60 @@ export default {
         titleColor: {
             type: String,
             default: 'text-gray-800'
+        }
+    },
+    data() {
+        return {
+            timelineRefs: [],
+            timelineActive: [],
+            observer: null,
+            stackRefs: [],
+            stackActive: [],
+            projectActive: []
+        };
+    },
+    mounted() {
+        /**
+         * Intersection Observer를 사용하여 세로선과 project 내용이 화면에 등장할 때 애니메이션 트리거
+         */
+        this.timelineActive = this.projects.map(() => false);
+        this.projectActive = this.projects.map(() => false);
+        this.stackActive = this.projects.map(() => false);
+        this.observer = new window.IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // 세로선
+                const timelineIdx = this.timelineRefs.findIndex(el => el === entry.target);
+                if (timelineIdx !== -1 && entry.isIntersecting) {
+                    if (!this.timelineActive[timelineIdx]) {
+                        this.timelineActive[timelineIdx] = true;
+                        // 세로선 애니메이션(700ms) 후 project 전체 등장
+                        setTimeout(() => {
+                            this.projectActive[timelineIdx] = true;
+                            // project 내용 등장 후 stack 순차 등장
+                            this.stackActive[timelineIdx] = true;
+                        }, 150);
+                    }
+                }
+            });
+        }, {
+            threshold: 0,
+            rootMargin: '0px 0px -10% 0px'
+        });
+        this.$nextTick(() => {
+            this.timelineRefs.forEach(el => {
+                if (el) this.observer.observe(el);
+            });
+        });
+    },
+    beforeUnmount() {
+        /**
+         * Observer 해제
+         */
+        if (this.observer) {
+            this.timelineRefs.forEach(el => {
+                if (el) this.observer.unobserve(el);
+            });
+            this.observer.disconnect();
         }
     }
 };
