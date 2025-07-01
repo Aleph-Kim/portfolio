@@ -1,7 +1,7 @@
 <template>
-    <section id="projects" class="py-20">
+    <section class="section flex items-center flex-col">
+        <SectionTitle title="Projects" />
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">Projects</h2>
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div v-for="project in projects" :key="project.id"
@@ -55,11 +55,12 @@
 import { projectsData } from '/public/data/projects';
 import ProjectModal from './ProjectModal.vue';
 import Skill from './Skill.vue';
-
+import SectionTitle from './SectionTitle.vue';
 export default {
     components: {
         ProjectModal,
-        Skill
+        Skill,
+        SectionTitle
     },
     data() {
         return {

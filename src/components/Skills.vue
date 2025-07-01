@@ -1,8 +1,8 @@
 <template>
-    <section class="section flex items-center justify-center flex-col mt-20 mb-40">
+    <section class="section flex items-center justify-center flex-col">
+        <SectionTitle title="Skills" />
         <!-- Skills -->
         <div class="mt-10">
-            <h2 class="text-4xl font-bold text-center mb-10">Skills</h2>
 
             <div class="flex flex-col ml-3">
                 <div v-for="(skillCategory, index) in skills" :key="index"
@@ -20,11 +20,12 @@
 <script>
 import Skill from './Skill.vue';
 import { skillsData } from '/public/data/skills.js';
-
+import SectionTitle from './SectionTitle.vue';
 export default {
     name: 'Skills',
     components: {
-        Skill
+        Skill,
+        SectionTitle
     },
     data() {
         return {

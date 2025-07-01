@@ -1,10 +1,11 @@
 <template>
     <section class="section flex items-center flex-col min-h-screen">
+        <SectionTitle title="About" />
         <!-- About -->
-        <div class="w-[90%] md:w-[70%] mt-10">
-            <h2 class="text-4xl font-bold text-center mb-20">About</h2>
+        <div class="w-[90%] md:w-[70%]">
 
-            <div class="flex flex-col justify-around items-center sm:flex-row lg:justify-start" data-aos="fade-down" data-aos-duration="800">
+            <div class="flex flex-col justify-around items-center sm:flex-row lg:justify-start" data-aos="fade-down"
+                data-aos-duration="800">
                 <img :src="about.image" alt="Profile Picture"
                     class="mb-5 md:mb-0 sm:w-[40%] sm:mr-7 sm:max-w-80 rounded-md w-[80%]">
                 <div class="flex flex-col justify-between md:min-h-[350px] text-lg w-[80%] md:w-auto">
@@ -72,7 +73,8 @@
                 </div>
             </div>
             <div class="mt-14 mx-auto">
-                <div v-for="pursue in about.pursue" :key="pursue.title" class="mb-8" data-aos="fade-down" data-aos-duration="800">
+                <div v-for="pursue in about.pursue" :key="pursue.title" class="mb-8" data-aos="fade-down"
+                    data-aos-duration="800">
                     <div class="text-2xl font-bold bg-gray-200 dark:bg-zinc-600 rounded-md p-2 transition duration-500">
                         {{ pursue.title }}
                     </div>
@@ -84,11 +86,16 @@
 </template>
 
 <script>
+/**
+ * About 섹션 타이틀이 화면에 등장할 때 가로선 애니메이션을 트리거합니다.
+ */
 import { aboutData } from '/public/data/about';
+import SectionTitle from './SectionTitle.vue';
 export default {
+    components: { SectionTitle },
     data() {
         return {
-            about: aboutData
+            about: aboutData,
         };
     },
 };
