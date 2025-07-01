@@ -5,7 +5,8 @@
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div v-for="project in projects" :key="project.id"
-                        class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                        class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                        data-aos="fade-down" data-aos-duration="800">
                         <div class="relative">
                             <img :src="project.image" :alt="project.title" class="w-full h-64 object-cover" />
                         </div>
@@ -14,7 +15,7 @@
                             <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg line-clamp-3">
                                 {{ project.description }}
                             </p>
-                            <div class="flex flex-wrap gap-3 mb-6">
+                            <div class="flex flex-wrap gap-1 md:gap-2 mb-6">
                                 <Skill v-for="skill in project.skills" :key="skill" :name="skill" />
                             </div>
                             <div class="flex justify-between items-center">
