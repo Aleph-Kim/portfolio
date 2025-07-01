@@ -1,6 +1,6 @@
 <template>
     <Teleport to="body">
-        <div v-if="isOpen" class="fixed inset-0 z-50 flex items-center justify-center">
+        <div v-if="isOpen" class="fixed inset-0 z-50 flex items-center justify-center text-lg">
             <!-- 배경 오버레이 -->
             <div class="absolute inset-0 bg-black bg-opacity-50" @click="closeModal"></div>
 
