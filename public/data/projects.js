@@ -44,7 +44,87 @@ export const projectsData = [
     //     "github": "https://github.com/Aleph-Kim/discord-aws-cost-bot"
     // },
     {
-        "id": 1,
+        "title": "Onochu",
+        "image": "/image/project/onochu.png",
+        "description": "추천 노래 공유 서비스",
+        "skills": ["PHP", "JavaScript", "Redis", "MySQL", "Docker", "OCI", "GitHub"],
+        "link": "https://onochu.aleph.kr/",
+        "github": "https://github.com/Aleph-Kim/onochu",
+        "summary": "지인에게 노래를 공유할때 공유 과정을 더 간편하게 만들기 위해 개발한 추천 노래 공유 서비스. 프레임워크에 의존하지 않고 순수 PHP만을 사용하여 서버 개발 전반을 직접 구현함으로써 PHP의 기본 구조와 동작 원리를 심화 학습하는 데 초점을 맞춘 프로젝트.",
+        "people": "1인 개발 프로젝트",
+        "period": "2025.03 ~ 2025.05 (약 3개월)",
+        "features": [
+            {
+                "title": "전체 프로젝트 기획 및 디자인",
+                "description": [
+                    "노래 추천 과정을 자동화하고 간편하게 공유할 수 있는 웹서비스로 기획",
+                    "사용자 흐름, 주요 기능, 인터페이스를 직접 설계"
+                ]
+            },
+            {
+                "title": "FLO Music API를 활용한 음원 정보 수집 및 편집 기능",
+                "description": [
+                    "사용자가 입력한 키워드로 FLO API에서 음원 및 앨범 정보를 검색",
+                    "곡명, 아티스트, 앨범 커버, 발매일, 장르 등의 데이터를 수집",
+                    "가공한 음원 데이터를 자체 DB에 저장하여 서비스 내에서 재사용"
+                ]
+            },
+            {
+                "title": "다양한 음원 플랫폼 앱 링크 호환 및 원클릭 이동 기능",
+                "description": [
+                    "Android, IOS, windows, macOS 접속 환경에서 유튜브 뮤직, FLO, Spotify 등 다양한 음원 플랫폼의 링크로 포맷 자동 변환",
+                    "카카오톡 템플릿 메시지 안에서 각 플랫폼의 노래 상세 페이지로 바로 이동 가능한 링크 구성",
+                    "서비스 내부에서 사용자가 선택한 플랫폼 앱으로 곡 정보를 원클릭으로 연동 가능하도록 설계"
+                ]
+            },
+            {
+                "title": "Redis를 활용한 음원 정보 캐싱",
+                "description": [
+                    "FLO API 호출 결과를 Redis에 캐싱하여 API 요청 수 최소화",
+                    "최대 2.5s 이상 소요되던 검색 결과 응답 속도를 0.7s 미만으로 최적화",
+                    "일 평균 300회 이상 발생하던 FLO API 사용량을 50회 미만으로 최적화"
+                ]
+            },
+            {
+                "title": "카카오 SNS 로그인을 기반으로 한 회원 시스템 구현",
+                "description": [
+                    "카카오 OAuth2 인증 플로우를 직접 구현하여 사용자 인증 처리",
+                    "인증된 사용자 정보를 기반으로 회원가입, 로그인, 세션 관리 기능 구성",
+                    "사용자 정보 편집, 추천 기록 저장 등 실제 서비스 운영에 필요한 회원 기능으로 확장"
+                ]
+            },            
+            {
+                "title": "카카오 메시지 API를 이용한 추천 노래 공유 기능",
+                "description": [
+                    "추천 곡을 카카오톡 친구에게 템플릿 메시지 형식으로 전송",
+                    "사용자 맞춤 메시지 템플릿 구성"
+                ]
+            },
+            {
+                "title": "서버 모니터링 및 로그 수집 시스템 구축",
+                "description": [
+                    "Prometheus로 서버 자원(CPU, 메모리, 트래픽 등) 메트릭 수집",
+                    "Grafana 대시보드를 통한 실시간 시각화 및 과부하 대응 체계 마련",
+                    "애플리케이션 로그를 수집하고, 모니터링을 위한 로그 관리 환경 구성"
+                ]
+            },
+            {
+                "title": "Go 기반 이미지 호스팅 서버 구축",
+                "description": [
+                    "앨범 커버 이미지를 직접 저장하고 제공하기 위한 경량 이미지 서버 구현",
+                    "Go 언어로 HTTP 파일 업로드 및 CDN 대체 역할 수행"
+                ]
+            },
+            {
+                "title": "CI/CD 파이프라인 구축",
+                "description": [
+                    "GitHub Action을 활용한 빌드 자동화",
+                    "Docker 이미지 생성 후 서버로 자동 배포"
+                ]
+            },
+        ]
+    },
+    {
         "title": "Aleph's Portfoilo Website",
         "image": "/image/meta-preview.png",
         "description": "김채민 개발자의 포트폴리오 웹사이트",
@@ -88,7 +168,6 @@ export const projectsData = [
         ]
     },
     {
-        "id": 2,
         "title": "Itzip",
         "image": "/image/project/itzip.png",
         "description": "개발자 취준생 플랫폼",

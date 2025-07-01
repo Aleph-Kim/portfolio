@@ -8,7 +8,7 @@
                         class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
                         data-aos="fade-down" data-aos-duration="800">
                         <div class="relative">
-                            <img :src="project.image" :alt="project.title" class="w-full h-64 object-cover" />
+                            <img :src="project.image" :alt="project.title" class="w-full h-64 object-cover object-top" />
                         </div>
                         <div class="p-8">
                             <h3 class="text-2xl font-bold mb-3 drop-shadow-lg">{{ project.title }}</h3>
