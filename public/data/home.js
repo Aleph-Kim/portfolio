@@ -1,7 +1,7 @@
 export const homeData = {
     title: "개발이 즐거운 김채민 개발자입니다 😁",
-    github: "https://dev-kimchi.tistory.com",
-    blog: "https://github.com/aleph-kim"
+    github: "https://github.com/aleph-kim",
+    blog: "https://dev-kimchi.tistory.com",
 };
 
 export const typingStrings = [
