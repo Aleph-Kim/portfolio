@@ -21,6 +21,7 @@
                             <div class="flex justify-between items-center">
                                 <div class="flex items-center justify-center gap-4">
                                     <a v-if="project.link" :href="project.link" target="_blank"
+                                        :title="project.title + ' 바로가기'"
                                         class="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300">
                                         <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6">
                                             <path
@@ -29,6 +30,7 @@
                                         </svg>
                                     </a>
                                     <a v-if="project.github" :href="project.github" target="_blank"
+                                        :title="project.title + ' 깃허브 바로가기'"
                                         class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24">
                                             <path
@@ -37,10 +39,10 @@
                                         </svg>
                                     </a>
                                 </div>
-                                <a @click="openModal(project)"
+                                <span @click="openModal(project)"
                                     class="inline-block px-7 py-2.5 border-2 border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-colors duration-200 cursor-pointer text-base text-center border-solid">
                                     상세 설명
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </div>

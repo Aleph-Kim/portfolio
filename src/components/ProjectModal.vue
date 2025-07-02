@@ -7,7 +7,7 @@
             <!-- 모달 컨텐츠 -->
             <div class="relative bg-white dark:bg-gray-800 rounded-lg max-w-4xl w-full mx-4 max-h-[90vh]">
                 <!-- 닫기 버튼 -->
-                <a @click="closeModal"
+                <span @click="closeModal"
                     class="absolute top-0 right-0 m-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-white/50 hover:bg-gray-100 dark:bg-gray-800/50 dark:hover:bg-gray-700 transition-all duration-300 transform hover:cursor-pointer border border-gray-200 dark:border-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 dark:text-gray-300"
                         viewBox="0 0 20 20" fill="currentColor">
@@ -15,7 +15,7 @@
                             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                             clip-rule="evenodd" />
                     </svg>
-                </a>
+                </span>
                 <div class="overflow-y-auto max-h-[90vh]">
                     <!-- 프로젝트 헤더 -->
                     <div class="p-6 border-b border-gray-200 dark:border-gray-700">
@@ -32,6 +32,7 @@
                                 <!-- 링크 -->
                                 <div class="flex gap-2 mb-4">
                                     <a v-if="project.link" :href="project.link" target="_blank"
+                                        :title="project.title + ' 바로가기'"
                                         class="inline-flex items-center gap-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-all duration-300 transform hover:shadow-lg no-underline">
                                         <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
                                             <path
@@ -41,6 +42,7 @@
                                         <span class="text-base">사이트 이동</span>
                                     </a>
                                     <a v-if="project.github" :href="project.github" target="_blank"
+                                        :title="project.title + ' 깃허브 바로가기'"
                                         class="inline-flex items-center gap-1 px-3 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-all duration-300 transform hover:shadow-lg no-underline">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24">
                                             <path
@@ -84,6 +86,7 @@
                                 <div class="flex gap-x-2 flex-wrap">
                                     <h4 class="font-semibold">{{ feature.title }}</h4>
                                     <a v-if="feature.link" :href="feature.link" target="_blank"
+                                        :title="feature.title + ' 블로그 포스팅 바로가기'"
                                         class="decoration-dotted underline-offset-4 text-gray-400 dark:text-gray-500">
                                         블로그 포스팅
                                     </a>

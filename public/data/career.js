@@ -17,7 +17,8 @@ export const careerData = [
                     "특정 상품 노출 극대화를 위한 메인 상품 노출 프로세스, 팝업 관리 기능 구현",
                     "메인페이지 로딩 시간 최적화를 위해 Redis 캐싱을 도입하여 평균 로딩 시간을 7.3초에서 2.5초로 대폭 단축"
                 ],
-                "link": "https://www.edupang.com/"
+                "link": "https://www.edupang.com/",
+                "linkTitle": "에듀팡 사이트 바로가기"
             },
             {
                 "title": "AIPEN 사이트 개발",
@@ -28,7 +29,8 @@ export const careerData = [
                     "메인페이지 상품 소개 슬라이드 구현",
                     "게시판 기반 공지사항, FAQ, QnA, 제휴문의 기능 구현"
                 ],
-                "link": "https://www.aipen.co.kr/"
+                "link": "https://www.aipen.co.kr/",
+                "linkTitle": "AIPEN 사이트 바로가기"
             },
             {
                 "title": "나눔커머스 사이트 개발",
@@ -49,7 +51,8 @@ export const careerData = [
                     "카테고리별 교육과정 분류 기능 구현",
                     "교육과정 데이터를 Excel 형식에서 JSON 형식으로 변환하는 Python기반 프로그램 구현"
                 ],
-                "link": "https://www.realteaching.co.kr/"
+                "link": "https://www.realteaching.co.kr/",
+                "linkTitle": "리얼티칭 사이트 바로가기"
             },
             {
                 "title": "스쿨몰 사이트 개발",
@@ -80,7 +83,8 @@ export const careerData = [
                     "총 27개의 팀 프로젝트에 대한 관련 코드 리뷰 및 기술 피드백 제공",
                     "평균 4.8/5점의 멘토 만족도 달성"
                 ],
-                "link": "https://likelion.net/school/kdt-backendj-10th"
+                "link": "https://likelion.net/school/kdt-backendj-10th",
+                "linkTitle": "멋쟁이사자처럼 과정 소개 바로가기"
             }
         ],
         "titleColor": "text-[#FF7710]"
@@ -101,7 +105,8 @@ export const careerData = [
                     "총 30개의 팀 프로젝트에 대한 코드 리뷰 및 프로젝트 아키텍처 검토, 기술 피드백 제공",
                     "98.81/100점의 FT 최종 만족도 달성"
                 ],
-                "link": "https://school.programmers.co.kr/learn/courses/24767/24767-4%EA%B8%B0-k-digital-training-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B8%B0%EB%B0%98-%EB%B0%B1%EC%97%94%EB%93%9C-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81"
+                "link": "https://school.programmers.co.kr/learn/courses/24767/24767-4%EA%B8%B0-k-digital-training-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B8%B0%EB%B0%98-%EB%B0%B1%EC%97%94%EB%93%9C-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81",
+                "linkTitle": "프로그래머스 과정 소개 바로가기"
             }
         ],
         "titleColor": "text-[#3E0499]"

@@ -27,7 +27,7 @@
                     <div class="flex items-center">
                         <h3 class="text-blue-700 font-bold text-lg">{{ project.title }}</h3>
                         <!-- 사이트 링크 -->
-                        <a v-if="project.link" :href="project.link" target="_blank"
+                        <a v-if="project.link" :href="project.link" target="_blank" :title="project.linkTitle"
                             class="text-blue-500 hover:underline inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 24 24"
                                 fill="currentColor">

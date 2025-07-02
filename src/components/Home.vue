@@ -8,14 +8,14 @@
                 {{ homeData.title }}
             </div>
             <div class="flex justify-center items-center mt-5 w-full">
-                <a :href=homeData.blog target="blank"
+                <a :href=homeData.blog target="blank" title="개발자 블로그 바로가기"
                     class="text-xl mr-2 transition-all duration-500 w-12 h-12 flex justify-center items-center rounded-2xl text-[var(--color-text)] hover:bg-[var(--color-text)] hover:text-[var(--color-background);]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="M0 3a3 3 0 1 0 6 0a3 3 0 0 0-6 0m9 18a3 3 0 1 0 6 0a3 3 0 0 0-6 0m0-9a3 3 0 1 0 6 0a3 3 0 0 0-6 0m0-9a3 3 0 1 0 6 0a3 3 0 0 0-6 0m9 0a3 3 0 1 0 6 0a3 3 0 0 0-6 0" />
                     </svg>
                 </a>
-                <a :href=homeData.github target="blank"
+                <a :href=homeData.github target="blank" title="개발자 깃허브 바로가기"
                     class="text-2xl transition-all duration-500 w-12 h-12 flex justify-center items-center rounded-2xl text-[var(--color-text)] hover:bg-[var(--color-text)] hover:text-[var(--color-background);]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" clip-rule="evenodd"

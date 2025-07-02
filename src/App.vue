@@ -19,10 +19,10 @@
         <nav @mouseenter="showNavbar()" @mouseleave="briefShowNavbar()"
             :class="['w-full fixed bottom-0 flex justify-center bg-white/70 dark:bg-[#181818]/70 h-14 transition-all ease-[ease] duration-500 z-10', { 'opacity-0 pointer-events-none': !isNavbarVisible }]">
             <div class="w-[70%] flex justify-center items-center">
-                <a v-for="(section, index) in sections" :key="index" @click="scrollToSection(index + 1)" :class="['w-40 text-center hover:cursor-pointer hover:text-xl transition-all',
+                <span v-for="(section, index) in sections" :key="index" @click="scrollToSection(index + 1)" :class="['w-40 text-center hover:cursor-pointer hover:text-xl transition-all',
                     currentSection === index + 1 ? 'font-bold' : '']">
                     {{ section }}
-                </a>
+                </span>
             </div>
         </nav>
         <Home ref="Section1" class="container mx-auto" />
