@@ -25,7 +25,7 @@
                 </span>
             </div>
         </nav>
-        <Home ref="Section1" class="container mx-auto" />
+        <Home ref="Section1" class="container mx-auto" @scroll-section="scrollToSection(2)"/>
         <About ref="Section2" class="container mx-auto"/>
         <Skills ref="Section3" class="container mx-auto"/>
         <Career ref="Section4" class="container mx-auto"/>
@@ -77,6 +77,7 @@ export default {
             this.setDarkMode(!this.isDarkMode); // 현재 상태의 반대값으로 설정
         },
         scrollToSection(sectionNumber) {
+            console.log(sectionNumber);
             this.$refs[`Section${sectionNumber}`].$el.scrollIntoView({ behavior: 'smooth' });
             this.currentSection = sectionNumber; // 클릭한 섹션을 현재 섹션으로 설정
         },

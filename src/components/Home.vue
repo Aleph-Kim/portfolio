@@ -25,13 +25,13 @@
                 </a>
             </div>
         </div>
-        <div class="absolute bottom-20 pointer-events-none flex flex-col gap-0 items-center">
+        <div class="absolute bottom-20 flex flex-col gap-0 items-center cursor-pointer" @click="$emit('scrollSection')">
             <svg class="w-10 h-10 text-[var(--color-text)] arrow-fade" style="animation-delay: 50ms;" fill="none"
                 stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
-            <svg class="w-10 h-10 text-[var(--color-text)] arrow-fade mt-[-25px]" fill="none"
-                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <svg class="w-10 h-10 text-[var(--color-text)] arrow-fade mt-[-25px]" fill="none" stroke="currentColor"
+                stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
         </div>
