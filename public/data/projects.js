@@ -151,6 +151,8 @@ export const projectsData = [
                 "description": [
                     "Tailwind CSS를 사용한 반응형 퍼블리싱",
                     "Vue 컴포넌트를 기반으로한 재사용성 높은 UI 구조 설계 및 구현",
+                    "meta 태그, Open Graph 설정 등을 활용한 검색엔진 최적화(SEO)",
+                    "Google PageSpeed 기준 접근성 93점, 검색엔진 최적화 100점 달성"            
                 ]
             },
             {
