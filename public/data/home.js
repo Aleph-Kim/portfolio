@@ -1,5 +1,5 @@
 export const homeData = {
-    title: "개발이 즐거운 김채민 개발자입니다 😁",
+    title: "코드에 즐거움을 담는 김채민 개발자입니다 😁",
     github: "https://github.com/aleph-kim",
     blog: "https://dev-kimchi.tistory.com",
 };
