@@ -102,6 +102,7 @@ export const projectsData = [
             },
             {
                 "title": "서버 모니터링 및 로그 수집 시스템 구축",
+                "link": "https://dev-kimchi.tistory.com/entry/PHP-Docker-Prometheus-Grafana-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81",
                 "description": [
                     "Prometheus로 서버 자원(CPU, 메모리, 트래픽 등) 메트릭 수집",
                     "Grafana 대시보드를 통한 실시간 시각화 및 과부하 대응 체계 마련",
@@ -110,6 +111,7 @@ export const projectsData = [
             },
             {
                 "title": "Go 기반 이미지 호스팅 서버 구축",
+                "link": "https://dev-kimchi.tistory.com/entry/Go-%ED%8C%8C%EC%9D%BC-%ED%98%B8%EC%8A%A4%ED%8C%85-%EC%84%9C%EB%B2%84-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B8%B0%EC%88%A0-%EC%84%A4%EB%AA%85%EC%84%9C",
                 "description": [
                     "앨범 커버 이미지를 직접 저장하고 제공하기 위한 경량 이미지 서버 구현",
                     "Go 언어로 HTTP 파일 업로드 및 CDN 대체 역할 수행"
@@ -137,6 +139,7 @@ export const projectsData = [
         "features": [
             {
                 "title": "전체 프로젝트 기획 및 디자인",
+                "link": "https://dev-kimchi.tistory.com/entry/vue-%EA%B0%9C%EB%B0%9C%EC%9E%90-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8",
                 "description": [
                     "프로젝트 목적 및 기능 구성 기획",
                     "Home, About, Skill, Career, Project 총 5개의 섹션으로 구성하여 정보 전달 흐름을 구조화",
@@ -210,12 +213,14 @@ export const projectsData = [
             },
             {
                 "title": "프로젝트 Github 알림 봇 개발",
+                "link": "https://dev-kimchi.tistory.com/entry/Github-%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EA%B9%83%ED%97%88%EB%B8%8C-%EC%95%8C%EB%A6%BC-actionDiscord-Github-Notification-%EC%84%A4%EB%AA%85%EC%84%9C",
                 "description": [
                     "GitHub 레포지토리에서 이슈가 발생하거나 업데이트될 때 이를 실시간으로 감지하고 Discord 채널에 즉각적으로 알림을 전송하는 봇 개발",
                 ]
             },
             {
                 "title": "프로젝트 AWS 요금 봇 개발",
+                "link": "https://dev-kimchi.tistory.com/entry/Discord-AWS-%EC%9A%94%EA%B8%88-%EC%95%8C%EB%A6%BC-%EB%B4%87",
                 "description": [
                     "AWS 비용을 매일 자동으로 모니터링하고 Discord 채널에 알림을 전송하는 봇 개발",
                 ]

@@ -71,7 +71,7 @@
                             <p class="text-gray-600 dark:text-gray-300">{{ project.people }}</p>
                         </div>
 
-                        <!-- 프로젝트 기간 -->  
+                        <!-- 프로젝트 기간 -->
                         <div class="mb-6">
                             <h3 class="text-xl font-bold mb-2 text-blue-500">프로젝트 기간</h3>
                             <p class="text-gray-600 dark:text-gray-300">{{ project.period }}</p>
@@ -81,7 +81,13 @@
                         <div class="mb-6">
                             <h3 class="text-xl font-bold mb-2 text-blue-500">프로젝트 기여</h3>
                             <div class="ml-3 mb-2" v-for="feature in project.features" :key="feature.title">
-                                <h4 class="font-semibold">{{ feature.title }}</h4>
+                                <div class="flex gap-x-2 flex-wrap">
+                                    <h4 class="font-semibold">{{ feature.title }}</h4>
+                                    <a v-if="feature.link" :href="feature.link" target="_blank"
+                                        class="decoration-dotted underline-offset-4 text-gray-400 dark:text-gray-500">
+                                        블로그 포스팅
+                                    </a>
+                                </div>
                                 <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
                                     <li v-for="description in feature.description" :key="description">{{ description }}
                                     </li>
